@@ -1,2 +1,2 @@
-[Basic URl Shortener](https://smol.place/)
+[Basic URL Shortener](https://smol.place/)
 
