@@ -18,5 +18,5 @@ class AddSiteForm(FlaskForm):
 
     def validate_alias(self, alias):
         site = Site.query.filter(Site.alias.ilike(self.alias.data)).first()
-        if site is not None:
+        if self.alias.data.lower() == 'add' or site is not None:
             raise ValidationError("Please use a different alias.")
