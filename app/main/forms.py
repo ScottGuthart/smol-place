@@ -28,7 +28,7 @@ class AddSiteForm(FlaskForm):
             Length(min=1, max=200),
         ],
     )
-    submit = SubmitField("Add Alias")
+    submit = SubmitField("Shorten URL")
 
     def validate_alias(self, alias):
         site = Site.query.filter(Site.alias.ilike(self.alias.data)).first()
