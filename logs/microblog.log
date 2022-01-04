@@ -1,0 +1,30 @@
+2022-01-03 21:36:14,232 ERROR: Exception on /google [GET] [in /Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/scottguthart/workspace/smol/app/main/routes.py", line 24, in redirect
+    site = Site.query.filter(Site.alias.ilike(alias.data)).first_or_404()
+AttributeError: 'str' object has no attribute 'data'
+2022-01-03 21:36:42,322 INFO: Microblog startup [in /Users/scottguthart/workspace/smol/app/__init__.py:70]
+2022-01-03 21:36:43,326 ERROR: Exception on /google [GET] [in /Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scottguthart/workspace/smol/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/scottguthart/workspace/smol/app/main/routes.py", line 25, in redirect
+    return redirect(site.url.data)
+AttributeError: 'str' object has no attribute 'data'
+2022-01-03 21:37:03,033 INFO: Microblog startup [in /Users/scottguthart/workspace/smol/app/__init__.py:70]
+2022-01-03 21:39:54,038 INFO: Microblog startup [in /Users/scottguthart/workspace/smol/app/__init__.py:70]
+2022-01-03 21:39:56,459 INFO: Microblog startup [in /Users/scottguthart/workspace/smol/app/__init__.py:70]
