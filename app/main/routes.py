@@ -28,4 +28,8 @@ def add_alias():
 @bp.route("/<alias>", methods=["GET"])
 def alias_redirect(alias):
     site = Site.query.filter(Site.alias.ilike(alias)).first_or_404()
+    if site.visits is None:
+        site.visits = 0
+    site.visits += 1
+    db.session.commit()
     return redirect(site.url)
