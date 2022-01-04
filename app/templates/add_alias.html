@@ -11,7 +11,7 @@
       <div>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-        <ul>
+        <ul style="color: green">
             {% for message in messages %}
             <li>{{ message }}</li>
             {% endfor %}

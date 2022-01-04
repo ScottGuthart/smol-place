@@ -8,4 +8,4 @@ class Site(db.Model):
     visits = db.Column(db.Integer, default=0)
 
     def __repr__(self):
-        return f'<Site {self.alias} - {self.url}>'
+        return f'<Site {self.alias} - {self.url} (Visits: {self.visits})>'
