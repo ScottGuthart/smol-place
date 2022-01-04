@@ -21,9 +21,7 @@ def add_alias():
             "Your smol url is:"
             f" {url_for('main.alias_redirect', alias=form.alias.data, _external=True)}"
         )
-        return render_template(
-            "add_alias.html", title="Shorten URL", form=AddSiteForm()
-        )
+        return redirect(url_for("main.add_alias"))
     return render_template("add_alias.html", title="Shorten URL", form=form)
 
 
