@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         {% if title %}
-        <title>{{ title }} - smol place</title>
+        <title>{{ title }}</title>
         {% else %}
         <title>Welcome to smol place</title>
         {% endif %}
@@ -20,7 +20,11 @@
         {% endwith %}
       </div>
 
-      <h1>Add Alias</h1>
+      <header style="margin-bottom: 24px">
+          <h1 style="margin-bottom: 0">Shorten URL</h1>
+          <div style="color: dimgray">
+              https://smol.place/<span style="color: blue">your-alias</span></div>
+      </header>
       <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
