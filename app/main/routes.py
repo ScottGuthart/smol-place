@@ -5,6 +5,11 @@ from app import db
 from app.main.forms import AddSiteForm
 
 
+@bp.route('/')
+def index():
+    return redirect(url_for('main.add_alias'))
+
+
 @bp.route("/add", methods=["GET", "POST"])
 def add_alias():
     form = AddSiteForm()
