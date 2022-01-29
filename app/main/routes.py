@@ -14,7 +14,8 @@ def index():
 def add_alias():
     form = AddSiteForm()
     if form.validate_on_submit():
-        site = Site(url=form.url.data, alias=form.alias.data)
+        ip = request.environ.get("HTTP_X_REAL_IP", request.remote_addr)
+        site = Site(url=form.url.data, alias=form.alias.data, ip=ip)
         db.session.add(site)
         db.session.commit()
         flash(
