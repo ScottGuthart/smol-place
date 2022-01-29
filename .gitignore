@@ -24,3 +24,5 @@ app.db
 flaskapp.log*
 .DS_Store
 logs/*
+
+.idea
