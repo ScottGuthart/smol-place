@@ -1,3 +1,4 @@
+from datetime import datetime
 from app import db
 
 
@@ -7,6 +8,7 @@ class Site(db.Model):
     url = db.Column(db.String(255), nullable=True)
     alias = db.Column(db.String(200), unique=True, index=True)
     visits = db.Column(db.Integer, default=0)
+    added = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
         return f'<Site {self.alias} - {self.url} (Visits: {self.visits})>'
